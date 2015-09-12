@@ -655,10 +655,10 @@ uis.controller('uiSelectCtrl',
 
     var key = e.which;
 
-    // if(~[KEY.ESC,KEY.TAB].indexOf(key)){
-    //   //TODO: SEGURO?
-    //   ctrl.close();
-    // }
+    if(~[KEY.ESC,KEY.TAB].indexOf(key)){
+      //TODO: SEGURO?
+      ctrl.close();
+    }
 
     $scope.$apply(function() {
 
