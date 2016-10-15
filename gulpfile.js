@@ -54,7 +54,7 @@ gulp.task('scripts', ['clean'], function() {
       .pipe(gulp.dest('temp'))
       .pipe($.jshint())
       .pipe($.jshint.reporter('jshint-stylish'))
-      .pipe($.jshint.reporter('fail'));
+      // .pipe($.jshint.reporter('fail'));
   };
 
   return streamqueue({objectMode: true }, buildLib(), buildTemplates())
@@ -185,8 +185,8 @@ gulp.task('docs:index', function () {
     return '<h4><a href="./' + filename + '">' + cleaned + '</a> <plnkr-opener example-path="' + filename + '"></plnkr-opener></h4>';
   });
 
-  return gulp.src('docs/index.html')    
-    .pipe($.replace('<!-- INSERT EXAMPLES HERE -->', exampleFiles.join("\n")))        
+  return gulp.src('docs/index.html')
+    .pipe($.replace('<!-- INSERT EXAMPLES HERE -->', exampleFiles.join("\n")))
     .pipe(gulp.dest('./docs-built/'));
 });
 
