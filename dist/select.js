@@ -1,7 +1,7 @@
 /*!
  * ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.19.3 - 2016-08-17T06:16:41.345Z
+ * Version: 0.19.4 - 2017-01-10T17:26:58.349Z
  * License: MIT
  */
 
@@ -870,10 +870,10 @@ uis.controller('uiSelectCtrl',
       e.stopPropagation();
     }
 
-    // if(~[KEY.ESC,KEY.TAB].indexOf(key)){
-    //   //TODO: SEGURO?
-    //   ctrl.close();
-    // }
+    if(~[KEY.ESC,KEY.TAB].indexOf(key)){
+      //TODO: SEGURO?
+      ctrl.close();
+    }
 
     $scope.$apply(function() {
 
